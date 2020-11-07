@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS cities;
+DROP TABLE IF EXISTS citys;
 DROP TABLE IF EXISTS countries;
 
 CREATE TABLE countries (
@@ -7,7 +7,7 @@ CREATE TABLE countries (
   continent VARCHAR(255)
 );
 
-CREATE TABLE cities (
+CREATE TABLE citys (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   visited BOOLEAN,

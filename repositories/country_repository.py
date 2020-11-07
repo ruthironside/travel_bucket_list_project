@@ -55,7 +55,7 @@ def update(country):
 def cities(country):
     cities = []
 
-    sql = "SELECT * FROM tasks WHERE user_id = %s"
+    sql = "SELECT * FROM cities WHERE user_id = %s"
     values = [country.id]
     results = run_sql(sql, values)
 
