@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/countries" method="post">
+
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="e.g Scotland" required autofocus>
+  </div>
+
+  <div>
+    <label for="continent">Continent:</label>
+    <input type="text" id="continent" name="continent" placeholder="e.g Europe" required autofocus>
+  </div>
+
+
+  <div>
+    <label for="author">Author:</label>
+    <select id="author" name="author_id">
+      {% for author in all_authors %}
+        <option value="{{ author.id }}">{{ author.full_name() }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <button type="submit">Add To Bucket List!</button>
+
+</form>
+
+{% endblock %}
