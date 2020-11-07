@@ -6,8 +6,8 @@ import repositories.city_repository as city_repository
 import repositories.country_repository as country_repository
 
 
-# city_repository.delete_all()
-# country_repository.delete_all()
+city_repository.delete_all()
+country_repository.delete_all()
 
 country1 = Country("France", "Europe")
 country_repository.save(country1)
