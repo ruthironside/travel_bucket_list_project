@@ -1,10 +1,9 @@
 class City:
     
-    def __init__(self, name, country, visited = True, notes ,id = None):
+    def __init__(self, name, country, visited = False, id = None):
         self.name = name
         self.country = country
         self.visited = visited
-        self.notes = notes
         self.id = id
 
     def mark_visited(self):

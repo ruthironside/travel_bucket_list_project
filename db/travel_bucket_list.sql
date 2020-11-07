@@ -11,6 +11,5 @@ CREATE TABLE cities (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   visited BOOLEAN,
-  notes TEXT,
   country_id INT REFERENCES countries(id)
 );
