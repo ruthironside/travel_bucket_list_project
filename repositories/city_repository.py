@@ -13,6 +13,19 @@ def save(city):
     city.id = id
     return city
 
+
+def select_all():
+    cities = []
+
+    sql = "SELECT * FROM cities"
+    results = run_sql(sql)
+
+    for row in results:
+        city = City(row['name'], country, row['visited'], row['id'] )
+        cities.append(city)
+    return cities
+
+
 def select(id):
     city = None
     sql = "SELECT * FROM cities WHERE id = %s"
@@ -39,5 +52,17 @@ def update(city):
     values = [city.name, city.country, city.visited, city.id]
     print(values)
     run_sql(sql, values)
+
+def countries(city):
+    countries = []
+
+    sql = "SELECT * FROM countries WHERE author_id = %s"
+    values = [city.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        country = Country(row['name'], row['continent'], row['id'] )
+        country.append(country)
+    return countries
 
 

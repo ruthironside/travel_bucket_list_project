@@ -9,19 +9,59 @@ cities_blueprint = Blueprint("cities", __name__)
 
 @cities_blueprint.route("/cities")
 def cities():
-    # cities = city_repository.select_all()
+    cities = city_repository.select_all()
     return render_template("cities/index.html", cities = cities)
 
-@cities_blueprint.route("/cities/<id>")
-def show(id):
-    city = city_repository.select(id)
-    countries = city_repository.countries(city)
-    return render_template("cities/show.html", city=city, countries=countries)
-
-
-
-@cities_blueprint.route("/cities/new", methods=['GET'])
+@cities_blueprint.route("/tasks/new", methods=['GET'])
 def new_city():
-    countries = country_repository.select_all()
-    return render_template("cities/new.html", all_countries = countries)
+    users = user_repository.select_all()
+    return render_template("tasks/new.html", all_users = users)
 
+# CREATE
+# POST '/cities'
+@cities_blueprint.route("/tasks",  methods=['POST'])
+def create_task():
+    description = request.form['description']
+    user_id     = request.form['user_id']
+    duration    = request.form['duration']
+    completed   = request.form['completed']
+    user        = user_repository.select(user_id)
+    task        = Task(description, user, duration, completed)
+    task_repository.save(task)
+    return redirect('/tasks')
+
+
+# SHOW
+# GET '/tasks/<id>'
+@cities_blueprint.route("/tasks/<id>", methods=['GET'])
+def show_task(id):
+    task = task_repository.select(id)
+    return render_template('tasks/show.html', task = task)
+
+# EDIT
+# GET '/tasks/<id>/edit'
+@cities_blueprint.route("/tasks/<id>/edit", methods=['GET'])
+def edit_task(id):
+    task = task_repository.select(id)
+    users = user_repository.select_all()
+    return render_template('tasks/edit.html', task = task, all_users = users)
+
+# UPDATE
+# PUT '/tasks/<id>'
+@cities_blueprint.route("/tasks/<id>", methods=['POST'])
+def update_task(id):
+    description = request.form['description']
+    user_id     = request.form['user_id']
+    duration    = request.form['duration']
+    completed   = request.form['completed']
+    user        = user_repository.select(user_id)
+    task        = Task(description, user, duration, completed, id)
+    task_repository.update(task)
+    return redirect('/tasks')
+
+# DELETE
+# DELETE '/tasks/<id>'
+@cities_blueprint.route("/tasks/<id>/delete", methods=['POST'])
+def delete_task(id):
+    task_repository.delete(id)
+    return redirect('/tasks')
