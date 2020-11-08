@@ -26,7 +26,7 @@ def new_country():
 def create_country():
     name = request.form['name']
     continent = request.form['continent']
-    new_country = Country(name, continent,id)
+    new_country = Country(name, continent, id)
     country_repository.save(new_country)
     # return redirect('/countries')
     # return render_template('countries/show.html', country = country)

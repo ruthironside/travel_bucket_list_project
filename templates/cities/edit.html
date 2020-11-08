@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Edit a City</h2>
+
+<form action="/cities/{{city.id}}/edit" method="post">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{city.name}}" required autofocus>
+  </div>
+
+  <div>
+    <label for="continent">Visited?</label>
+    <input type="checkbox" id="visited" name="visited" value="{{city.visited}}"  >
+  </div>
+
+
+  <button type="submit">Update City</button>
+
+</form>
+
+{% endblock content %}

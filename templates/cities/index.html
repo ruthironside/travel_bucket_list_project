@@ -1,6 +1,26 @@
 {% extends "base.html" %}
-{% block home %}
-<section id="home-image">
+{% block content %}
 
+<h2>Cities</h2>
+
+{% for city in cities %}
+
+<section>
+    <p>{{ city.name }}</p>
+    <p>{{ city.country_id }}</p>
+    <p>{% if False %}
+    {{ city.visited }}
+    {% endif %}
+    </p>
+
+    <form action="/cities/{{ city.id }}/edit" method="POST">
+        <input type="submit" value="Edit">
+    </form>
+    
+    <form action="/cities/{{ city.id }}/delete" method="POST">
+        <input type="submit" value="Delete">
+    </form>
 </section>
+
+{% endfor %}
 {% endblock %}
