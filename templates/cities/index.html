@@ -13,6 +13,15 @@
     {% endif %}
     </p>
 
+    <form>
+        <input type="checkbox" id="visited" name="visited" value=True>
+        <label for="visited"> Visited</label><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      
+      </body>
+      </html>
+
     <form action="/cities/{{ city.id }}/edit" method="POST">
         <input type="submit" value="Edit">
     </form>

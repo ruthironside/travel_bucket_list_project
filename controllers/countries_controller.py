@@ -28,31 +28,27 @@ def create_country():
     continent = request.form['continent']
     new_country = Country(name, continent, id)
     country_repository.save(new_country)
-    # return redirect('/countries')
-    # return render_template('countries/show.html', country = country)
     return redirect("/countries")
 
 # SHOW
 @countries_blueprint.route("/countries/<id>", methods=['GET'])
 def show_country(id):
     country = country_repository.select(id)
-    return render_template('countries/show.html', country = country)
+    return render_template('countries', country = country)
 
 # EDIT
-@countries_blueprint.route("/countries/<id>/edit", methods=['GET'])
+@countries_blueprint.route("/countries/<id>/edit", methods=['post'])
 def edit_country(id):
     country = country_repository.select(id)
-    # city = country_repository.select_all()
-    # return render_template('countries/edit.html', country = country, cities = cities)
-    return render_template('countries/edit.html', country = country)
+    return render_template('/countries/edit.html', country = country)
 
 # UPDATE
-@countries_blueprint.route("/countries/<id>", methods=['POST'])
+@countries_blueprint.route("/countries/<id>", methods=['post'])
 def update_country(id):
     name = request.form['name']
     continent = request.form['continent']
     country = Country(name, continent, id)
-    country_repository.save(country)
+    country_repository.update(country)
     return redirect('/countries')
 
 # DELETE

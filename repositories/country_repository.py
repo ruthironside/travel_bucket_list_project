@@ -19,8 +19,8 @@ def select_all():
     sql = "SELECT * FROM countries"
     results = run_sql(sql)
 
-    for row in results:
-        country = Country(row['name'], row['continent'], row['id'] )
+    for result in results:
+        country = Country(result['name'], result['continent'], result['id'] )
         countries.append(country)
     return countries
 
@@ -52,16 +52,16 @@ def update(country):
     values = [country.name, country.continent, country.id]
     run_sql(sql, values)
 
-def cities(country):
-    cities = []
+# def cities(country):
+#     cities = []
 
-    sql = "SELECT * FROM cities WHERE country_id = %s"
-    values = [country.id]
-    results = run_sql(sql, values)
+#     sql = "SELECT * FROM cities WHERE country_id = %s"
+#     values = [country.id]
+#     results = run_sql(sql, values)
 
-    for row in results:
-        city = City(row['name'], country, row['visited'], row['id'] )
-        cities.append(city)
-    return cities
+#     for row in results:
+#         city = City(row['name'], country, row['visited'], row['id'] )
+#         cities.append(city)
+#     return cities
 
 

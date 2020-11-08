@@ -14,12 +14,12 @@ country_repository.save(country1)
 country2 = Country("Germany", "Europe")
 country_repository.save(country2)
 
-# country_repository.select_all()
+country_repository.select_all()
 
 city_1 = City("Paris", country1, False)
 city_repository.save(city_1)
 
-city_2 = City("Berlin", country2, False)
+city_2 = City("Berlin", country2, True)
 city_repository.save(city_2)
 
 

@@ -1,11 +1,11 @@
 #home-image {
     width:100vw;
     height:100vh;
-    background-image: url('static/images/background.jpg');
+    background-image: url('images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-body{
-  font-family: "Helvetica", arial, sans-serif; font-size: 16px;
+body {
+  align-items: center;
 }
