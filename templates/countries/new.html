@@ -13,15 +13,10 @@
     <input type="text" id="continent" name="continent" placeholder="e.g Europe" required autofocus>
   </div>
 
-
-  <div>
-    <label for="author">Author:</label>
-    <select id="author" name="author_id">
-      {% for author in all_authors %}
-        <option value="{{ author.id }}">{{ author.full_name() }}</option>
-      {% endfor %}
-    </select>
-  </div>
+  <!-- <div>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" placeholder="e.g Edinburgh">
+  </div> -->
 
   <button type="submit">Add To Bucket List!</button>
 

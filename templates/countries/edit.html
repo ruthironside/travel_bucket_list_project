@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/countries/{{country.id}}" method="post">
+<h2>Edit a Location</h2>
+
+<form action="/countries/{{country.id}}/edit" method="post">
   <div>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" value="{{country.name}}" required>
+    <input type="text" id="name" name="name" value="{{country.name}}" required autofocus>
   </div>
 
   <div>
     <label for="continent">Continent:</label>
-    <input type="text" id="continent" name="continent" value="{{country.continent}}" required autofocus>
+    <input type="text" id="continent" name="continent" value="{{country.continent}}" required >
   </div>
 
 
@@ -17,4 +19,4 @@
 
 </form>
 
-{% endblock %}
+{% endblock content %}
