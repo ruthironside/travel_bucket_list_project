@@ -1,7 +1,7 @@
 from db.run_sql import run_sql
 
-from models.country import Country
 from models.city import City
+from models.country import Country
 
 
 def save(country):
@@ -55,7 +55,7 @@ def update(country):
 def cities(country):
     cities = []
 
-    sql = "SELECT * FROM cities WHERE user_id = %s"
+    sql = "SELECT * FROM cities WHERE country_id = %s"
     values = [country.id]
     results = run_sql(sql, values)
 
