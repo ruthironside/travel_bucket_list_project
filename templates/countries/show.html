@@ -5,6 +5,9 @@
     <p>{{country.name}}</p>
     <hr>
     <p>{{country.continent}}</p>
+    {% for city in cities %}
+    <p> {{city.name}}</p>
+    {% endfor %}
     <p><a href="/countries/{{country.id}}/edit">Edit</a></p>
   </div>
 

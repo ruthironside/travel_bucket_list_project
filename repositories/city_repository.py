@@ -54,16 +54,17 @@ def update(city):
     print(values)
     run_sql(sql, values)
 
-def countries(city):
-    countries = []
+def cities(id):
+    cities = []
 
-    sql = "SELECT * FROM countries WHERE author_id = %s"
-    values = [city.id]
+    sql = "SELECT * FROM cities WHERE country_id = %s"
+    values = [id]
     results = run_sql(sql, values)
 
+    country = country_repository.select(id)
     for row in results:
-        country = Country(row['name'], row['continent'], row['id'] )
-        country.append(country)
-    return countries
+        city = City(row['name'], country, row['visited'], row['id'] )
+        cities.append(city)
+    return cities
 
 

@@ -3,7 +3,7 @@
 
 <h2>Edit a Location</h2>
 
-<form action="/countries/{{country.id}}/edit" method="post">
+<form action="/countries/{{country.id}}" method="post">
   <div>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" value="{{country.name}}" required autofocus>
@@ -11,7 +11,15 @@
 
   <div>
     <label for="continent">Continent:</label>
-    <input type="text" id="continent" name="continent" value="{{country.continent}}" required >
+    <select name="continent" id="continent">
+      <option value="{{country.continent}}">{{country.continent}}</option>
+      <option value="Africa">Africa</option>
+      <option value="Asia">Asia</option>
+      <option value="Australia">Australia</option>
+      <option value="Europe">Europe</option>
+      <option value="North America">North America</option>
+      <option value="South America">South America</option>
+    </select>
   </div>
 
 
