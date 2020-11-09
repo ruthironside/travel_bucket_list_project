@@ -12,7 +12,7 @@
     <label for="country">Country:</label>
     <select name="country" id="country">
       {% for country in countries %}
-      <option value="{{country.country_id}}">{{country.name}}</option>
+      <option value="{{country.id}}">{{country.name}}</option>
       {% endfor %}
     </select>
   </div>
