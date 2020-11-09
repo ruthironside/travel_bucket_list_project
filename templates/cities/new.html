@@ -10,7 +10,11 @@
 
   <div>
     <label for="country">Country:</label>
-    <input type="text" id="country" name="country" placeholder="e.g Scotland">
+    <select name="country" id="country">
+      {% for country in countries %}
+      <option value="{{country.country_id}}">{{country.name}}</option>
+      {% endfor %}
+    </select>
   </div>
 
   <button type="submit">Add </button>
