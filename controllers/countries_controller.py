@@ -57,3 +57,5 @@ def update_country(id):
 def delete_country(id):
     country_repository.delete(id)
     return redirect('/countries')
+
+
