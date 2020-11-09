@@ -35,13 +35,13 @@ def create_country():
 def show_country(id):
     cities = city_repository.cities(id)
     country = country_repository.select(id)
-    return render_template('countries/show.html', country = country, cities=cities)
+    return render_template('countries/show.html', country=country, cities=cities)
 
 # EDIT
 @countries_blueprint.route("/countries/<id>/edit", methods=['GET'])
 def edit_country(id):
     country = country_repository.select(id)
-    return render_template('countries/edit.html', country = country)
+    return render_template('countries/edit.html', country=country)
 
 # UPDATE
 @countries_blueprint.route("/countries/<id>", methods=['POST'])

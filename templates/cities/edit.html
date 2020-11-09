@@ -2,7 +2,7 @@
 {% block content %}
 
 <h2>Edit a City</h2>
-
+<body>
 <form action="/cities/{{city.id}}/" method="post">
   <div>
     <label for="name">Name:</label>
@@ -10,17 +10,13 @@
   </div>
 
   <div>
-    <label for="continent">Visited?</label>
     <input type="checkbox" id="visited" name="visited" value=True>
-    <label for="visited"> Visited</label><br><br>
-    <input type="submit" value="Submit">
-    
-    </body>
-    </html>
+    <label for="visited"> Visited?</label><br><br>
+  </div>
 
 
   <button type="submit">Update City</button>
-
 </form>
+</body>
 
 {% endblock content %}
