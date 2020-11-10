@@ -3,7 +3,7 @@
 
 <h2>Edit a City</h2>
 <body>
-<form action="/cities/{{city.id}}" method="post">
+<form class="editform" action="/cities/{{city.id}}" method="post">
   <div>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" value="{{city.name}}" required autofocus>
@@ -19,8 +19,9 @@
   </div>
 
 
-  <button type="submit">Update City</button>
+
 </form>
+<button class="button" type="submit">Update City</button>
 </body>
 
 {% endblock content %}

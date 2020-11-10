@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/cities" method="POST">
+<form class="editform" action="/cities" method="POST">
 
   <div>
     <label for="name">City name:</label>
@@ -16,9 +16,7 @@
       {% endfor %}
     </select>
   </div>
-
-  <button type="submit">Add </button>
-
 </form>
+<button class="button" type="submit">Add </button>
 
 {% endblock %}

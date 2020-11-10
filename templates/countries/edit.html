@@ -3,7 +3,7 @@
 <main class="editcountry">
 <h2>Edit a Location</h2>
 
-<form action="/countries/{{country.id}}" method="post">
+<form class="editform" action="/countries/{{country.id}}" method="post">
   <div>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" value="{{country.name}}" required autofocus>
@@ -22,10 +22,8 @@
     </select>
   </div>
 </main>
-
+</form>
 
 <button class="button" type="submit">Update Country</button>
-
-</form>
 
 {% endblock content %}
