@@ -66,5 +66,17 @@ def cities(id):
         cities.append(city)
     return cities
 
+def visited():
+    cities = []
+    sql = "SELECT * FROM cities WHERE visited = True"
+    values = []
+    results = run_sql(sql, values)
+
+    for row in results:
+        country = country_repository.select(row['country_id'])
+        city = City(row['name'], country, row['visited'], row['id'] )
+        cities.append(city)
+    return cities
+
 
 

@@ -62,7 +62,7 @@ def delete_city(id):
     return redirect('/cities')
 
 
-# @cities_blueprint.route("/visited", methods=['POST'])
-# def delete_city(id):
-#     city_repository.delete(id)
-#     return redirect('/cities')
+@cities_blueprint.route("/visited", methods=['GET'])
+def visited_city():
+    cities = city_repository.visited()
+    return render_template('cities/index.html', cities=cities)
