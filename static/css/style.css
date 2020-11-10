@@ -1,28 +1,7 @@
-#home-image {
-    width:100vw;
-    height:100vh;
-    background-image: url('background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 body {
   font-family: "Helvetica", arial, sans-serif;
   background-color: rgb(255, 255, 255);
 }
-
-/* body > header {
-    margin: 0;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} */
-
-/* body > header > nav > ul {
-  padding: 30px;
-  text-decoration: none; 
-} */
 
 .header {
   margin: 0px;
@@ -39,26 +18,22 @@ body {
   text-align: center;
 }
 
+
+
 .countrylist {
   display: flex;
-  flex-direction: c;
+  flex-direction: row;
   justify-content: center;
+}
+
+.countrylist a {
   text-decoration: none;
   list-style: none; 
   text-align: center;
 }
 
-/* .menu {
-    display: inline;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    display: inline-block;
-    padding: 8px;
-    background-color: #00c3ff;
-    display: flex;
-} */
+
+
 
 .menu {
   display: flex;
@@ -89,12 +64,14 @@ body > main {
 .button {
   background-color: #1abc9c;
   border: none;
+  border-radius: 5px;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
+  padding: 8px 16px;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  align-content: center;
+  text-align: center;
 }
 
 .delete input[type=button], input[type=submit], input[type=reset] {
@@ -106,5 +83,45 @@ body > main {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  align-content: center;
+  text-align: center;
 }
 
+.delete {
+  align-content: center;
+  text-align: center;
+}
+
+.showcities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+  align-content: center;
+  text-align: center;
+}
+
+.showcities a {
+  text-decoration: none;
+}
+
+.showcountries {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+  align-content: center;
+  text-align: center;
+}
+
+.showcountries a {
+  text-decoration: none;
+}
+
+.editcountry {
+  text-align: center;
+}
+
+.updatebutton {
+  align-content: center;
+}

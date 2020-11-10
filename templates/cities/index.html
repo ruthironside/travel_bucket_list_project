@@ -3,21 +3,20 @@
 
 <h2 class="pageheader">Cities</h2>
 <br>
-{% for city in cities %}
-<section>
+
+<section class="showcities">
+    {% for city in cities %}
     <p>{{ city.name }}</p>
     <a href="/cities/{{ city.id }}/edit">Edit City</a> 
-    <br>
     <section class = "delete">
     <form action="/cities/{{ city.id }}/delete" method="POST">
         <input type="submit" value="Delete">
     </form>
     </section>
     <br>
-    <br>
-    <br>
+    {% endfor %}
 </section>
-{% endfor %}
+
 
 <ul class="menu">
     <a href="/cities/new">Add</a>

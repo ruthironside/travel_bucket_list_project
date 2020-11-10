@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<main class="editcountry">
 <h2>Edit a Location</h2>
 
 <form action="/countries/{{country.id}}" method="post">
@@ -21,9 +21,10 @@
       <option value="South America">South America</option>
     </select>
   </div>
+</main>
 
 
-  <button type="submit">Update Country</button>
+<button class="button" type="submit">Update Country</button>
 
 </form>
 
