@@ -8,6 +8,31 @@
 
 body {
   font-family: "Helvetica", arial, sans-serif;
-  background-color: rgb(141, 221, 245);
+  background-color: ghostwhite;
+}
+
+body > header {
+    margin: 0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header {
+  padding: 40px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+}
+
+.menu {
+  /* display: flex;
+  flex-direction: row; */
+  margin: 50px;
+  padding: 50px;
+  text-decoration: none;
 }
 

@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <!-- <link rel="stylesheet" href="static/css/style.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>Travel Bucket List</title>
 </head>
 <body>
+    <div class="header">
+        <h1>Wanderlust</h1>
+        <p>Where will you visit next?</p>
+    </div>
     <header>
         <nav>
             <ul class="menu">
-                <a href="/">Home</a>
-                <a href="/countries">Countries</a>
-                <a href="/cities">Cities</a>
-                <a href="/visited">View all visited places</a>
+                <li><a href="/">Home</a></li>
+                <li><a href="/countries">Countries</a></li>
+                <li><a href="/cities">Cities</a></li>
+                <li><a href="/visited">View all visited places</a></li>
             </ul>
         </nav>
     </header>
