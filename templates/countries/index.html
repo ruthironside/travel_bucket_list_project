@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Countries</h2>
+<h2 class="pageheader"> Countries</h2>
 <br>
 {% for country in countries %}
-<section>
+<section class="countrylist">
     <a href="/countries/{{country.id}}">{{ country.name }}</a>
     <br>
     <br>
@@ -12,9 +12,9 @@
 </section>
 {% endfor %}
 
-
-
-<li><a href="/countries/new">Add</a></li>
+<ul class="menu">
+<a href="/countries/new">Add</a>
+</ul>
 {% endblock %}
 
 

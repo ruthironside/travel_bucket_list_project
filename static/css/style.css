@@ -1,7 +1,7 @@
 #home-image {
     width:100vw;
     height:100vh;
-    background-image: url('static/images/background.jpg');
+    background-image: url('background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -32,6 +32,20 @@ body {
   color: white;
   font-size: 30px;
   font-family: 'Pacifico', cursive;
+}
+
+.pageheader {
+  color: rgb(74, 74, 74);
+  text-align: center;
+}
+
+.countrylist {
+  display: flex;
+  flex-direction: c;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none; 
+  text-align: center;
 }
 
 /* .menu {
@@ -67,6 +81,30 @@ body {
     
 }
 
+
 body > main {
   text-align: center;
 }
+
+.button {
+  background-color: #1abc9c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.delete input[type=button], input[type=submit], input[type=reset] {
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
