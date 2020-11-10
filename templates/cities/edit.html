@@ -9,15 +9,10 @@
     <input type="text" id="name" name="name" value="{{city.name}}" required autofocus>
   </div>
 
-  <!-- <div>
-    <input type="checkbox" id="visited" name="visited">
-    <label for="visited"> Visited?</label>
-  </div> -->
-
   <div>
     <label for="visited">Visited?:</label>
     <select name="visited" id="visited">
-      <option value="{{city.visited}}">{{city.visited}}</option>
+      <option value="select"disabled selected hidden>Select:</option>
       <option value="True">True</option>
       <option value="False">False</option>
     </select>
