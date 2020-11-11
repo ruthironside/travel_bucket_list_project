@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<main class="editcountry">
-<h2>Edit a Location</h2>
-
-<form class="editform" action="/countries/{{country.id}}" method="post">
+<head>
+  <h2>Edit a Country</h2>
+</head>
+<main class="editcountry"></main>
+  <form class="editform" action="/countries/{{country.id}}" method="post">
   <div>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" value="{{country.name}}" required autofocus>
   </div>
-
   <div>
     <label for="continent">Continent:</label>
     <select name="continent" id="continent">
@@ -21,10 +21,9 @@
       <option value="South America">South America</option>
     </select>
   </div>
-<input type="Submit">
-</form>
+  <input type="Submit">
+  </form>
 </main>
 
-<!-- <button class="button" type="submit">Update Country</button> -->
 
 {% endblock content %}

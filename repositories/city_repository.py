@@ -52,6 +52,7 @@ def update(city):
     sql = "UPDATE cities SET (name, country_id, visited) = (%s, %s, %s) WHERE id = %s"
     values = [city.name, city.country.id, city.visited, city.id]
     run_sql(sql, values)
+    
 
 def cities(id):
     cities = []
@@ -66,9 +67,23 @@ def cities(id):
         cities.append(city)
     return cities
 
+
 def visited():
     cities = []
     sql = "SELECT * FROM cities WHERE visited = True"
+    values = []
+    results = run_sql(sql, values)
+
+    for row in results:
+        country = country_repository.select(row['country_id'])
+        city = City(row['name'], country, row['visited'], row['id'] )
+        cities.append(city)
+    return cities
+
+
+def stilltosee():
+    cities = []
+    sql = "SELECT * FROM cities WHERE visited = False"
     values = []
     results = run_sql(sql, values)
 

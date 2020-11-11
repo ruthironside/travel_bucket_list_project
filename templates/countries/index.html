@@ -1,18 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2 class="pageheader"> Countries</h2>
+<head>
+    <h2 class="pageheader"> Countries</h2>
+</head>
+<main>
+    <div class="addbutton">
+        <a href="/countries/new">Add</a>
+    </div>
 <br>
 {% for country in countries %}
-<section class="countrylist">
-    <a href="/countries/{{country.id}}">{{ country.name }}</a>
-</section>
+    <section class="countrylist">
+        <a href="/countries/{{country.id}}">{{ country.name }}</a>
+    </section>
 <br>
 {% endfor %}
+</main>
 
-<ul class="addbutton">
-<a href="/countries/new">Add</a>
-</ul>
+
 {% endblock %}
 
 
