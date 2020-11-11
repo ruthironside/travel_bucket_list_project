@@ -137,15 +137,16 @@ body > main {
   }
   
   input[type=submit] {
-    width: 10%;
+    width: 8%;
     align-items: center;
     background-color: #1abc9c;
     color: white;
-    padding: 14px 20px;
+    padding: 10px 18px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 12px;
   }
   
   input[type=submit]:hover {
@@ -160,4 +161,57 @@ body > main {
 
   .deletebutton {
     text-align: center;
+    font-size: 12px;
+  }
+
+  .deletebutton a {
+  
+    border-radius: 5px;
+    background: #1abc9c;
+    color: #fff;
+      padding: 10px;
+      text-decoration: none;
+      
+  }
+
+
+  .addbutton {
+    text-align: center;
+    font-size: 12px;
+
+  
+  }
+  .addbutton li {
+    list-style: none;
+  }
+  
+  .addbutton a {
+  
+    border-radius: 5px;
+    background: #1abc9c;
+    color: #fff;
+      padding: 10px;
+      text-decoration: none;
+      
+  }
+
+
+  .editbutton {
+    text-align: center;
+    font-size: 12px;
+    margin-right: 40px;
+  
+  }
+  .editbutton li {
+    list-style: none;
+  }
+  
+  .editbutton a {
+  
+    border-radius: 5px;
+    background: #1abc9c;
+    color: #fff;
+      padding: 10px;
+      text-decoration: none;
+      
   }

@@ -7,8 +7,10 @@
 <section class="showcities">
     {% for city in cities %}
     <p>{{ city.name }}</p>
-    <a href="/cities/{{ city.id }}/edit">Edit City</a> 
-    <section class = "delete">
+    <ul class="editbutton">
+        <a href="/cities/{{city.id}}/edit">Edit</a>
+    </ul>
+    <section class="deletebutton">
     <form action="/cities/{{ city.id }}/delete" method="POST">
         <input type="submit" value="Delete">
     </form>
@@ -17,8 +19,7 @@
     {% endfor %}
 </section>
 
-
-<ul class="menu">
+<ul class="addbutton">
     <a href="/cities/new">Add</a>
 </ul>
 {% endblock %}
